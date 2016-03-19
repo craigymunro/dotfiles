@@ -45,3 +45,11 @@ function varnish_purge()
     curl -X PURGE --header "Host: $2" --url http://omar:80/$1
     curl -X PURGE --header "Host: $2" --url http://kima:80/$1
 }
+
+function vpn-connect {
+        osascript ~/Google\ Drive/Automator/vpn-connect.scpt
+}
+
+function vpn-disconnect {
+        osascript ~/Google\ Drive/Automator/vpn-disconnect.scpt
+}
