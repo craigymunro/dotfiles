@@ -53,3 +53,7 @@ function vpn-connect {
 function vpn-disconnect {
         osascript ~/Google\ Drive/Automator/vpn-disconnect.scpt
 }
+
+function find-file() {
+        find . -name "$@"
+}
