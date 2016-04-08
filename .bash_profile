@@ -25,7 +25,10 @@ HISTTIMEFORMAT="[%F %T] "
 
 export EDITOR="nano"
 export GREP_OPTIONS='--color=always'
-export PS1="$LIGHTGREY#\! [\t] $GREEN\u@\h $BLUE\w $LIGHTGREY\$(parse_git_branch) $WHITE$ "
+export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 export PATH=$HOME/local/bin:$PATH
+export PS1="$LIGHTGREY#\! [\t] $GREEN\u@\h $BLUE\w $LIGHTGREY\$(parse_git_branch) $WHITE$ "
+
+source ~/.bash_functions
 
 home
