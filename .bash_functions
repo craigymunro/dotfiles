@@ -68,4 +68,5 @@ function brew-daily {
 
 function ansible-password {
         pass list ansible/vault | pbcopy
+        echo "Password copied to clipboard."
 }
