@@ -57,3 +57,15 @@ function vpn-disconnect {
 function find-file() {
         find . -name "$@"
 }
+
+function brew-daily {
+        brew update;
+        brew upgrade;
+        brew cleanup;
+        brew cask update;
+        brew cask cleanup;
+}
+
+function ansible-password {
+        pass list ansible/vault | pbcopy
+}
