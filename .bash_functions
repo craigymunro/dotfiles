@@ -59,11 +59,11 @@ function find-file() {
 }
 
 function brew-daily {
-        brew update;
-        brew upgrade;
-        brew cleanup;
-        brew cask update;
-        brew cask cleanup;
+	brew update;
+	brew upgrade;
+	brew cleanup;
+	brew cask cleanup;
+	brew doctor;
 }
 
 function ansible-password {

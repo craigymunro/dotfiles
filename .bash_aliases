@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Home directory
-alias home="cd /var/www/dev/craig; ls"
+alias home="cd ~; ls"
 
 # Helpers
 alias ..="cd .."
@@ -18,9 +18,10 @@ alias gd="git diff"
 alias h="history"
 alias l="ls"
 alias ll="ls -al"
-alias ls="ls -alh --color=auto"
+alias ls="ls -alh"
 alias mkdir="mkdir -pv"
 alias search="find . -name"
+alias cask="brew cask"
 
 # Dev shortcuts
 alias sites="cd /etc/apache2-dev/sites-enabled; ls -al | grep craig"
@@ -36,3 +37,6 @@ alias mimport="/var/www/dev/craig/magnet-data-conversion/scripts/dump.sh; /var/w
 
 # MySQL
 alias mysql-connect="mysql --socket=/var/run/percona/dev/craig.sock -u root -p"
+
+# Dreamhost
+alias dreamhost-connect="ssh soberproductions@ps571826.dreamhostps.com"
