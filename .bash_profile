@@ -5,6 +5,7 @@
 [[ -f ~/.bashrc ]] && . ~/.bashrc
 [[ -f ~/.bash_aliases ]] && . ~/.bash_aliases
 [[ -f ~/.bash_functions ]] && . ~/.bash_functions
+[[ -f ~/dotfiles/git-completion.bash ]] && . ~/dotfiles/git-completion.bash
 
 shopt -s expand_aliases
 shopt -s histappend
