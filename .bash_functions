@@ -64,9 +64,26 @@ function brew-daily {
 	brew cleanup;
 	brew cask cleanup;
 	brew doctor;
+	mas upgrade;
 }
 
 function ansible-password {
         pass list ansible/vault | pbcopy
         echo "Password copied to clipboard."
+}
+
+function mormont-purge {
+
+	servers=(stokes carver)
+	files=(mormont.js mormont.css)
+
+	for server in "${servers[@]}"
+	do
+		for file in "${files[@]}"
+		do
+			url="http://$server:6081/2017/scripts/mormont/v2.9/$file"
+			echo "Purging $url"
+			curl -X PURGE --url $url -o /dev/null -sD -
+		done
+	done
 }
