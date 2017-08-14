@@ -64,6 +64,7 @@ function brew-daily {
 	brew cleanup;
 	brew cask cleanup;
 	brew doctor;
+	echo "Checking App Store for software updates...";
 	mas outdated;
 	mas upgrade;
 }
