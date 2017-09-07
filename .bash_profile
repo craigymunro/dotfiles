@@ -39,3 +39,4 @@ fi
 
 [ -r "$HOME/.smartcd_config" ] && ( [ -n $BASH_VERSION ] || [ -n $ZSH_VERSION ] ) && source ~/.smartcd_config
 export PATH="/usr/local/opt/gpg-agent/bin:$PATH"
+export PATH="/usr/local/bin:$PATH"
