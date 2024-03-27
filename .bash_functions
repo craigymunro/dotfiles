@@ -35,25 +35,6 @@ function stash-pull-apply()
 	git stash apply
 }
 
-function varnish_purge()
-{
-    # file, domain
-    file=$1
-    domain=$2
-
-    # To purge something on app servers:
-    curl -X PURGE --header "Host: $2" --url http://omar:80/$1
-    curl -X PURGE --header "Host: $2" --url http://kima:80/$1
-}
-
-function vpn-connect {
-        osascript ~/Google\ Drive/Automator/vpn-connect.scpt
-}
-
-function vpn-disconnect {
-        osascript ~/Google\ Drive/Automator/vpn-disconnect.scpt
-}
-
 function find-file() {
         find . -name "$@"
 }
@@ -67,25 +48,4 @@ function brew-daily {
 	echo "Checking App Store for software updates...";
 	mas outdated;
 	mas upgrade;
-}
-
-function ansible-password {
-        pass list ansible/vault | pbcopy
-        echo "Password copied to clipboard."
-}
-
-function mormont-purge {
-
-	servers=(stokes carver)
-	files=(mormont.js mormont.css)
-
-	for server in "${servers[@]}"
-	do
-		for file in "${files[@]}"
-		do
-			url="http://$server:6081/2017/scripts/mormont/v2.9/$file"
-			echo "Purging $url"
-			curl -X PURGE --url $url -o /dev/null -sD -
-		done
-	done
 }
