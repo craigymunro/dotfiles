@@ -27,7 +27,6 @@ HISTTIMEFORMAT="[%F %T] "
 export EDITOR="nano"
 export GREP_OPTIONS='--color=auto'
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
-export HOMEBREW_GITHUB_API_TOKEN="ed1991384e6e93d77783312c77ca12868dce1e89"
 export HOMEBREW_NO_ANALYTICS=1
 export HOMEBREW_NO_INSECURE_REDIRECT=1
 export PATH=$HOME/local/bin:$PATH
